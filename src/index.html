@@ -13,19 +13,19 @@
       font-family: 'Orbitron', sans-serif;
     }
 
-    body, html {
+    html, body {
       height: 100%;
     }
 
     body {
-      background-image: url('../public/CodeBlooded\ web-bg.webp'); /* Replace with the actual path */
+      background-image: url('background-image.png'); /* Replace with actual image path */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
     }
 
     .overlay {
@@ -46,7 +46,7 @@
       border-radius: 15px;
       box-shadow: 0 0 20px #ff0040;
       color: #fff;
-      width: 100%;
+      width: 90%;
       max-width: 400px;
     }
 
@@ -54,6 +54,7 @@
       margin-bottom: 20px;
       text-align: center;
       color: #ff0040;
+      font-size: 1.8rem;
     }
 
     .form-group {
@@ -64,6 +65,7 @@
       display: block;
       margin-bottom: 8px;
       color: #ccc;
+      font-size: 1rem;
     }
 
     .form-group input {
@@ -73,6 +75,7 @@
       border-radius: 8px;
       background-color: #222;
       color: #fff;
+      font-size: 1rem;
     }
 
     .login-btn {
@@ -83,22 +86,38 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 1rem;
       transition: background 0.3s;
     }
 
     .login-btn:hover {
       background-color: #e60036;
     }
+
+    @media (max-width: 480px) {
+      .login-form {
+        padding: 30px 20px;
+      }
+
+      .login-form h2 {
+        font-size: 1.5rem;
+      }
+
+      .form-group label,
+      .form-group input,
+      .login-btn {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="overlay"></div>
   <div class="login-form">
-    <h2>Student Login</h2>
+    <h2>CodeBlooded Login</h2>
     <div class="form-group">
       <label for="username">Username</label>
-      <input type="text" id="username" name="username" placeholder="Enter your Student-id" />
+      <input type="text" id="username" name="username" placeholder="Enter your username" />
     </div>
     <div class="form-group">
       <label for="password">Password</label>
